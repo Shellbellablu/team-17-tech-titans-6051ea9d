@@ -26,5 +26,16 @@ namespace levelup
 
             Assert.AreEqual(Name, result);
         }
+
+        [Test] //Direction
+        public void Direction()
+        {
+            
+            testObj = new Character(Name);
+            string result = testObj.getName();
+
+            Assert.AreEqual(Name, result);
+        }
+
     }
 }
