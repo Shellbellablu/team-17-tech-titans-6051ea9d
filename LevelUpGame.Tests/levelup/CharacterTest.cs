@@ -30,14 +30,14 @@ namespace levelup
         [Test] //move
         public void move()
         {
-            DIRECTION direction = "EAST"
+            DIRECTION direction = "EAST";
             testObj = new Character();
             var startPosition = testObj.getPosition();
             testObj.move(direction);
             var endPosition = testObj.getPosition();
 
 
-            Assert.AreEqual(startPosition.coordinates.xCoordinates, result);
+            Assert.AreEqual(startPosition.coordinates.xCoordinates + 1, endPosition.coordinates.yCoordinates);
         }
 
     }

@@ -23,5 +23,16 @@ namespace levelup
         }
 
 
+
+
+
+
+        public string getPosition() 
+        {
+            return position;
+        }
+
+
+
     }
 }
