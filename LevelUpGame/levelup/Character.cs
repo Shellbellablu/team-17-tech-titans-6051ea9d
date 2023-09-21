@@ -1,4 +1,7 @@
 using System.Drawing;
+using LevelUpGame.levelup;
+using static levelup.GameController;
+
 
 namespace levelup
 {
@@ -27,12 +30,15 @@ namespace levelup
 
 
 
-        public string getPosition() 
+        public Position getPosition() 
         {
-            return position;
+            return null;
         }
 
+        public void move(DIRECTION direction)
+        {
 
+        }
 
     }
 }

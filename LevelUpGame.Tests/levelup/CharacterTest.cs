@@ -1,5 +1,8 @@
 using NUnit.Framework;
 using levelup;
+using LevelUpGame.levelup;
+using levelup.cli;
+using static levelup.GameController;
 
 namespace levelup
 {
@@ -30,14 +33,14 @@ namespace levelup
         [Test] //move
         public void move()
         {
-            DIRECTION direction = "EAST";
+            DIRECTION direction = DIRECTION.EAST;
             testObj = new Character();
             var startPosition = testObj.getPosition();
             testObj.move(direction);
             var endPosition = testObj.getPosition();
 
 
-            Assert.AreEqual(startPosition.coordinates.xCoordinates + 1, endPosition.coordinates.yCoordinates);
+            Assert.AreEqual(startPosition.coordinates.X + 1, endPosition.coordinates.Y);
         }
 
     }
