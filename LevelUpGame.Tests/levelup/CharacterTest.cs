@@ -27,14 +27,17 @@ namespace levelup
             Assert.AreEqual(Name, result);
         }
 
-        [Test] //Direction
-        public void Direction()
+        [Test] //move
+        public void move()
         {
-            
-            testObj = new Character(Name);
-            string result = testObj.getName();
+            DIRECTION direction = "EAST"
+            testObj = new Character();
+            var startPosition = testObj.getPosition();
+            testObj.move(direction);
+            var endPosition = testObj.getPosition();
 
-            Assert.AreEqual(Name, result);
+
+            Assert.AreEqual(startPosition.coordinates.xCoordinates, result);
         }
 
     }
