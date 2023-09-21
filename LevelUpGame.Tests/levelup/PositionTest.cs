@@ -13,8 +13,8 @@ namespace LevelUpGame.Test.levelup
         {
             var positionObj = new Position(0, 0);
 
-            Assert.AreEqual(0, positionObj.coordinates.xCoordinates);
-            Assert.AreEqual(0, positionObj.coordinates.yCoordinates);
+            Assert.AreEqual(0, positionObj.coordinates.X);
+            Assert.AreEqual(0, positionObj.coordinates.Y);
         }
     }
 }

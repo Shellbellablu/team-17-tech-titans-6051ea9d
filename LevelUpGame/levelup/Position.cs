@@ -1,13 +1,15 @@
-﻿namespace LevelUpGame.levelup
+﻿using System.Drawing;
+
+namespace LevelUpGame.levelup
 {
     public class Position
     {
-        public (int xCoordinates, int yCoordinates) coordinates;
+        public Point coordinates;
 
         public Position(int xCoordinates, int yCoordinates)
         {
-            coordinates.xCoordinates = xCoordinates;
-            coordinates.yCoordinates = yCoordinates;
+            coordinates.X = xCoordinates;
+            coordinates.Y = yCoordinates;
         }   
     }
 }
