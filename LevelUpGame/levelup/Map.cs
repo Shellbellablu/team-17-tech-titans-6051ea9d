@@ -1,40 +1,68 @@
-using System.Drawing;
+using LevelUpGame.levelup;
+using static levelup.GameController;
 
 namespace levelup
 {
     public class Map
     {
         int numPositions=100;
-        public Position getPositions()
+        List<Position> positions =new List<Position>();
+
+        public List<Position> getPositions()
         {
-            testCalculatePosition
+            return positions;
         }
         public void calculatePosition(Position startingPosition, DIRECTION direction)
         {
+            var temp = startingPosition;
+            var validMove = false;
+
             switch(direction) 
             {
-                case NORTH:
-                    if IsPositionValid(startingPosition.coordinates.yCoordinates++) 
-                        startingPosition.coordinates.yCoordinates++;
-                break;
-                case SOUTH:
-                    startingPosition.coordinates.yCoordinates--
-                break;
-                case EAST:
-                    startingPosition.coordinates.xCoordinates++
-                break;
-                case WEST:
-                    startingPosition.coordinates.xCoordinates--
-                break;
+                case DIRECTION.NORTH:
+                    temp.coordinates.Y++;
+                    if (IsPositionValid(temp))
+                    {
+                        startingPosition.coordinates.Y++;
+                        validMove = true;
+                    }
+                    break;
+                case DIRECTION.SOUTH:
+                    temp.coordinates.Y--;
+                    if (IsPositionValid(temp))
+                    {
+                        startingPosition.coordinates.Y--;
+                        validMove = true;
+                    }
+                    break;
+                case DIRECTION.EAST:
+                    temp.coordinates.X++;
+                    if (IsPositionValid(temp))
+                    {
+                        startingPosition.coordinates.X++;
+                        validMove = true;
+                    }
+                    break;
+                case DIRECTION.WEST:
+                    temp.coordinates.X--;
+                    if (IsPositionValid(temp))
+                    {
+                        startingPosition.coordinates.X--;
+                        validMove = true;
+                    }
+                    break;
             }
+
+            if (validMove) positions.Add(startingPosition);
         }
         public bool IsPositionValid(Position positionCoordinates)
         {
-            Assert.Equal(0, positionCoordinates.coordinates.xCoordinates >= 0);
+            //TODO: check
+            return true;
         }
         public int GetTotalPositions()
         {
-            
+            return numPositions;
         }
     }
 }
