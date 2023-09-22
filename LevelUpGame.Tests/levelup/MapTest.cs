@@ -46,7 +46,8 @@ namespace levelup
         [Test]
         public void IsTotalPositionsFound()
         {
-            
+            testObj=new Map();// create a fake map
+            Assert.AreEqual(100,testObj.GetTotalPositions());
         }
     }
 }
