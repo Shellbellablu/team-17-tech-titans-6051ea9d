@@ -40,6 +40,8 @@ namespace levelup
             Assert.IsTrue(testObj.IsPositionValid(new Position(0, 9)));
             Assert.IsTrue(testObj.IsPositionValid(new Position(9, 0)));
             Assert.IsTrue(testObj.IsPositionValid(new Position(9, 9)));
+            Assert.IsFalse(testObj.IsPositionValid(new Position(-1, -1)));
+
         }
         [Test]
         public void IsTotalPositionsFound()

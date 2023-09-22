@@ -57,9 +57,17 @@ namespace levelup
         }
         public bool IsPositionValid(Position positionCoordinates)
         {
+            
             //TODO: check
-            return true;
-        }
+           if (positionCoordinates.coordinates.X>=0 &
+            positionCoordinates.coordinates.X<=9 &
+            positionCoordinates.coordinates.Y>=0 &
+            positionCoordinates.coordinates.Y<=9)
+            {
+               return true;
+            }
+            return false;
+            }
         public int GetTotalPositions()
         {
             return numPositions;
