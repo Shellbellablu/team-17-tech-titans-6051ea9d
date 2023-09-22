@@ -14,7 +14,7 @@ namespace levelup
         }
         public void calculatePosition(Position startingPosition, DIRECTION direction)
         {
-            var temp = startingPosition;
+            var temp = new Position(startingPosition.coordinates.X, startingPosition.coordinates.Y);
             var validMove = false;
 
             switch(direction) 

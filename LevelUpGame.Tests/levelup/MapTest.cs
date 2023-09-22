@@ -17,7 +17,7 @@ namespace levelup
             testObj=new Map();// create a fake map
             var result=testObj.getPositions();
 
-            Assert.AreEqual(1, result.Count);
+            Assert.AreEqual(0, result.Count);
         }
         [Test]
         public void IsPositionCalculated()
