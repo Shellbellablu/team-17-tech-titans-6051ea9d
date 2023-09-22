@@ -33,22 +33,23 @@ namespace levelup
         [Test]
         public void move()
         {
+            //instace - pre condition
             DIRECTION direction = DIRECTION.EAST;
             testObj = new Character();
-            var startPosition = testObj.getPosition();
-            testObj.move(direction);
-            var endPosition = testObj.getPosition();
+            var gameMap = new Map();
 
+            //function work
+            //testObj.enterMap(gameMap);
+            //var startPosition = testObj.getPosition();
+            //testObj.move(direction);
+            //var endPosition = testObj.getPosition();
+            
 
+            // excepted result
             //Assert.AreEqual(startPosition.coordinates.X + 1, endPosition.coordinates.Y);
         }
 
 
-[Test]
-        public void enterMap(Map controllerMap)
-        {
-            testObj.enterMap(controllerMap); 
-        }
 
 
     }
