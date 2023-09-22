@@ -17,7 +17,7 @@ namespace levelup
             testObj=new Map();// create a fake map
             var result=testObj.getPositions();
 
-            Assert.Equals(1, result.Count);
+            Assert.AreEqual(1, result.Count);
         }
         [Test]
         public void IsPositionCalculated()
@@ -27,8 +27,8 @@ namespace levelup
 
             testObj.calculatePosition(temp, DIRECTION.NORTH);
 
-            Assert.Equals(0, testObj.positions.First().coordinates.X);
-            Assert.Equals(1, testObj.positions.First().coordinates.Y);
+            Assert.AreEqual(0, testObj.positions.First().coordinates.X);
+            Assert.AreEqual(1, testObj.positions.First().coordinates.Y);
         }
 
         [Test]
