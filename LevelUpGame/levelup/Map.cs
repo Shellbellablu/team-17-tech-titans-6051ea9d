@@ -5,8 +5,8 @@ namespace levelup
 {
     public class Map
     {
-        int numPositions=100;
-        List<Position> positions =new List<Position>();
+        private int numPositions=100;
+        public List<Position> positions =new List<Position>();
 
         public List<Position> getPositions()
         {

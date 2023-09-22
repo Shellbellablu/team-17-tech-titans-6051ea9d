@@ -1,5 +1,8 @@
 using NUnit.Framework;
 using levelup;
+using LevelUpGame.levelup;
+using static levelup.GameController;
+using System.Linq;
 
 namespace levelup
 {
@@ -14,36 +17,34 @@ namespace levelup
             testObj=new Map();// create a fake map
             var result=testObj.getPositions();
 
-            Assert.Equals(0, result.xCoordinate);
-            Assert.Equals(0, result.yCoordinate);
+            Assert.Equals(1, result.Count);
         }
         [Test]
         public void IsPositionCalculated()
         {
             testObj=new Map();// create a fake map
-            testObj.coordinates.xCoordinate = 0;
-            testObj.coordinates.yCoordinate = 0;
+            var temp = new Position(0, 0);
 
-            testObj.calculatePosition(testObj, NORTH)
+            testObj.calculatePosition(temp, DIRECTION.NORTH);
 
-            Assert.Equals(0, testObj.coordinates.xCoordinate)
-            Assert.Equals(1, testObj.coordinates.yCoordinate)
+            Assert.Equals(0, testObj.positions.First().coordinates.X);
+            Assert.Equals(1, testObj.positions.First().coordinates.Y);
         }
+
         [Test]
         public void IsPositionValid()
         {
             testObj=new Map();// create a fake map
-            testObj.coordinates.xCoordinate
 
-            Assert.IsTrue(IsPositionValid(Position positionCoordinates));
-            Assert.IsTrue(positionCoordinates.coordinates.xCoordinate <= 9);
-            Assert.IsTrue(positionCoordinates.coordinates.yCoordinate >= 0);
-            Assert.IsTrue(positionCoordinates.coordinates.yCoordinate <= 9);
+            Assert.IsTrue(testObj.IsPositionValid(new Position(0, 0)));
+            Assert.IsTrue(testObj.IsPositionValid(new Position(0, 9)));
+            Assert.IsTrue(testObj.IsPositionValid(new Position(9, 0)));
+            Assert.IsTrue(testObj.IsPositionValid(new Position(9, 9)));
         }
         [Test]
         public void IsTotalPositionsFound()
         {
-            testGetTotalPositions
+            
         }
     }
 }
