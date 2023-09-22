@@ -9,6 +9,9 @@ namespace levelup
     {
         private readonly string DEFAULT_CHARACTER_NAME = "Thor";
         private string Name;
+        public Position currentPosition;
+        public Map map;
+
 
         public Character()
         {
@@ -32,12 +35,17 @@ namespace levelup
 
         public Position getPosition() 
         {
-            return null;
+            return currentPosition;
         }
 
         public void move(DIRECTION direction)
         {
+            map.calculatePosition(currentPosition,direction);
+        }
 
+        public void enterMap(Map controllerMap)
+        {
+            map = controllerMap;
         }
 
     }

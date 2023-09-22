@@ -30,7 +30,7 @@ namespace levelup
             Assert.AreEqual(Name, result);
         }
 
-        [Test] //move
+        [Test]
         public void move()
         {
             DIRECTION direction = DIRECTION.EAST;
@@ -42,6 +42,14 @@ namespace levelup
 
             //Assert.AreEqual(startPosition.coordinates.X + 1, endPosition.coordinates.Y);
         }
+
+
+[Test]
+        public void enterMap(Map controllerMap)
+        {
+            testObj.enterMap(controllerMap); 
+        }
+
 
     }
 }
